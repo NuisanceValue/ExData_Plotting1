@@ -7,7 +7,7 @@ household_power_consumption_feb_1_2$datetime<-paste(household_power_consumption_
 household_power_consumption_feb_1_2$datetime<-strptime(household_power_consumption_feb_1_2$datetime, format="%Y-%m-%d %H:%M:%S")
 #plot and output
 png("plot4.png",width=480,height=480)
-par(mfrow=c(2,2),mar=c(4,4,2,1),cex=0.7)
+par(mfrow=c(2,2),mar=c(4,4,3,1),cex=0.7)
 plot(household_power_consumption_feb_1_2$datetime,household_power_consumption_feb_1_2$Global_active_power, type="l", xlab="", ylab="Global Active Power", main="",yaxp=c(0,6,3))
 plot(household_power_consumption_feb_1_2$datetime,household_power_consumption_feb_1_2$Voltage, type="l",xlab="datetime",ylab="Voltage")
 plot(household_power_consumption_feb_1_2$datetime,household_power_consumption_feb_1_2$Sub_metering_1, type="l", xlab="", ylab="Energy sub metering", main="",col="black",yaxp=c(0,30,3))
